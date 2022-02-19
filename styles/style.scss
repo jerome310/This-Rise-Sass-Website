@@ -10,9 +10,11 @@
 
 body {
   background-image: url("/img/background.png");
-  background-position: top bottom;
-  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .logo {
@@ -56,55 +58,229 @@ body {
   @extend %boxes;
   margin: 0 auto;
   width: 60%;
+  .box-one {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    padding-bottom: 40px;
+  }
+  
+  .box-one img {
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .box-one h2 {
+    font-size: 20px;
+    padding: 10% 11% 15%;
+  }
+  
+  .box-one a {
+    text-decoration: none;
+    border: 1px solid $redSection;
+    background-color: $redSection;
+    padding: 15px 65px;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+
+  .box-two {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    padding-bottom: 40px;
+  }
+  
+  .box-two img {
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .box-two h2 {
+    font-size: 20px;
+    padding: 10% 8% 15%;
+  }
+  
+  .box-two a {
+    text-decoration: none;
+    border: 1px solid $redSection;
+    background-color: $redSection;
+    padding: 15px 65px;
+    border-radius: 20px;
+    color: #ffffff;
+  }
+
+  .box-three {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 30%;
+    padding-bottom: 40px;
+  }
+  
+  .box-three img {
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .box-three h2 {
+    font-size: 20px;
+    padding: 10% 8% 15%;
+  }
+  
+  .box-three a {
+    text-decoration: none;
+    border: 1px solid $redSection;
+    background-color: $redSection;
+    padding: 15px 65px;
+    border-radius: 20px;
+    color: #ffffff;
+  }
 }
 
-.box-one {
-  background-color: rgba(255,255,255,0.6);
-  border-color: rgba(255,255,255,0.6);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.footer {
+  color: rgba(68, 68, 68, 1);
+  text-align: center;
+  padding: 10% 0 2%;
+  font-family: $smallText;
+  font-size: 12px;
+  & a {
+    color: rgba(68, 68, 68, 1);
+    font-family: $smallText;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo img {
+    width: 25%;
+  }
+  .header-section {
+    & h1 {
+     font-size: 35px;
+     padding: 0 6% 2%;
+   }
+    & p {
+     font-size: 18px;
+     padding: 3% 10% 0%;
+   }
+   & .red-border {
+     width: 20%;
+   }
+   }
+   .box-container {
+     display: block;
+     width: 100%;
+     padding: 0px 0;
+     & .box-one {
+       margin: 25px auto 0;
+       text-align: center;
+       width: 85%;
+       & img {
+         display: block;
+         margin: 0 auto;
+         padding-top: 25px;
+       }
+       & h2 {
+        font-size: 20px;
+        padding: 4% 11% 7%
+      }
+     }
+     & .box-two {
+       margin: 25px auto 0;
+         text-align: center;
+         width: 85%;
+         & img {
+           display: block;
+           margin: 0 auto;
+           padding-top: 25px;
+         }
+         & h2 {
+          font-size: 20px;
+          padding: 4% 11% 7%
+        }
+     }
+     & .box-three {
+       margin: 25px auto 0;
+         text-align: center;
+         width: 85%;
+         & img {
+           display: block;
+           margin: 0 auto;
+           padding-top: 25px;
+         }
+         & h2 {
+          font-size: 20px;
+          padding: 4% 11% 7%
+        }
+     }
+   }
+   .footer {
+    padding: 10% 0 6%;
+   }
+}
+
+// Phone Devices
+@media only screen and (max-width: 600px){
+.logo img {
   width: 30%;
 }
-
-.box-one img {
+.header-section {
+ & h1 {
+  font-size: 35px;
+  padding: 0 6% 2%;
+}
+ & p {
+  font-size: 18px;
+  padding: 3% 10% 0%;
+}
+& .red-border {
+  width: 20%;
+}
+}
+.box-container {
   display: block;
-  margin: 20px auto 0;
+  width: 100%;
+  padding: 0px 0;
+  & .box-one {
+    margin: 25px auto 0;
+    text-align: center;
+    width: 85%;
+    & img {
+      display: block;
+      margin: 0 auto;
+      padding-top: 25px;
+    }
+  }
+  & .box-two {
+    margin: 25px auto 0;
+      text-align: center;
+      width: 85%;
+      & img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+      }
+  }
+  & .box-three {
+    margin: 25px auto 0;
+      text-align: center;
+      width: 85%;
+      & img {
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+      }
+  }
 }
-
-.box-one h2 {
-  font-size: 20px;
-  padding: 5% 8%;
 }
-
-.box-two {
-  background: rgba(255, 0, 0, 0.993);
-  opacity: 1;
-  width: 30%;
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
 }
-
-.box-two img {
-  display: block;
-  margin: 20px auto 0;
-}
-
-.box-two h2 {
-  font-size: 20px;
-  padding: 5% 8%;
-}
-.box-three {
-  background: rgba(255, 0, 0, 0.993);
-  opacity: 1;
-  width: 30%;
-}
-
-.box-three img {
-  display: block;
-  margin: 20px auto 0;
-}
-
-.box-three h2 {
-  font-size: 20px;
-  padding: 5% 8%;
-}
-
